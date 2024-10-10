@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Poppins:wght@200;300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+  background-color: rgb(12, 83, 119);
+}
+h2{
+  color: white;
+}
+.big-text {
+    color: #fff; /* White text color */
+    padding: none; /* Top and bottom padding */
+    text-align: center; /* Center align text */
+    font-size: 3rem; /* Main font size */
+    margin-bottom: 2rem; /* Space below the header */
+    margin-top: none;
+    background: linear-gradient(135deg, #007bff, #3394af); /* Gradient background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 50px 4px 20px rgba(4, 26, 49, 0.5); /* Shadow for depth */
+    /* Smooth hover transition */
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 10;
+
+}
+
+/* Optional: Add a hover effect */
+/* Lift effect on hover */
+.big-text:hover {
+    transform: translateY(-5px); 
+}
+
+
+/* search---------------------------------- */
+.search-bar {
+  display: flex;
+  margin-top: 10px;
+}
+.search-bar input {
+  padding: 15px;
+  width: 22%; /* Adjusts width to the container */
+  border: none;
+  border-radius: 4px;
+}
+.searchInput {
+  /* width: 20.50%; */
+  top: 20.35%;
+  margin-top: none;
+  /* padding: none 1; */
+  background: linear-gradient(rgb(227, 233, 235),rgb(179, 189, 204));
+  border-radius: 2px;
+}
+
+/* result item---------------------------------- */
+.results-dropdown {
+  font-size: 1rem;
+  color: black;
+  position: absolute;
+  background: linear-gradient(rgb(161, 209, 236),rgb(80, 167, 211),rgb(3, 89, 122));
+  width: 22%; /* Make the dropdown match the width of the input */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* Corrected from the earlier typo */
+  /* max-height: 100%; */
+  overflow-y: auto;
+  /* nov pi muk ri kroy */
+  /* z-index: 10000; */
+}
+.result-item {
+  padding: 5px;
+  border-bottom: 1px solid #000000;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+  background-color: transparent; /* Default background */
+}
+.result-item:hover {
+  background-color: #c3e9f5;
+  padding: 5px; /* Ensure padding stays the same */
+  border-bottom: 1px solid #000000; /* Ensure border stays the same */
+  visibility: visible; /* Always keep the result visible */
+}
+
+/* buton-------------------------------------------------------------- */
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1100px;
+  grid-template-columns: 20% 1fr;
+  gap: 2rem;
+}
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.btn {
+  padding: 0.3rem 2rem 0.3rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.1s ease-out;
+}
+.btn:hover {
+  background-color: rgb(216, 235, 255);
+}
+.btn.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* menu wrapper item ---------------------------------------------- */
+
+.menu-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 50px rgb(239, 239, 239);
+  border-radius: 25px;
+  padding: 1.5rem 0;
+  /* komm oy khernh konleng lot */
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+.card:hover > .card-heading {
+  color: dodgerblue;
+}
+.card:hover > .img {
+  transform: scale(1.1);
+}
+.img {
+  margin-top: -20px;
+  width: 250px;
+  transition: all 0.2s ease-in-out;
+}
+.card-heading {
+  margin-top: -30px;
+  text-align: center;
+  font-size: 1.7rem;
+  color: rgb(142, 142, 142);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+.price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  background-color: rgb(226, 246, 255);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  color: rgb(81, 168, 255);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* app icon ---------------------------------*/
+.app-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #007bff; /* Icon color */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.app-icon:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.icon-content {
+  color: white; /* Text color */
+  text-align: center;
+}
+
+/* size media ------------------------------------------- */
+@media screen and (max-width: 900px) {
+  .big-text {
+    font-size: 2rem;
+    background-color: transparent;
+    color: rgb(120, 120, 120);
+    margin: 1rem 0;
+  }
+  .container {
+    margin: none;
+    grid-template-columns: 1fr;
+  }
+  .menu-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .btn-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+  }
+  .search-bar input {
+    font-size: 11px;
+    padding: 15px;
+    width: 25%; /* Adjusts width to the container */
+    border: none;
+    border-radius: 4px;
+  }
+  .results-dropdown {
+    font-size: 1rem;
+    color: black;
+    position: absolute; /* Ensures dropdown is positioned relative to the nearest positioned ancestor */
+    background: linear-gradient(rgb(161, 209, 236), rgb(80, 167, 211), rgb(3, 89, 122));
+    width: 25%; /* Matches the width of the search input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 600px){
+    .menu-wrapper {
+      width: 100%;
+      display: grid; /* Use grid layout */
+      grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+      grid-gap: 1.2rem; /* Gap between items */
+      padding: none; /* Add some padding */
+    }
+  
+    .card {
+      width: 100%; /* Ensure cards fill the grid space ត្រូវប្រាកដថាកាតបំពេញចន្លោះក្រឡាចត្រង្គ*/
+      box-sizing: border-box; /* Include padding/border in width calculation រួមបញ្ចូលទ្រនាប់/ស៊ុមក្នុងការគណនាទទឹង*/
+    }
+  
+    .container {
+      padding: 0 1rem; /* Optional: add padding to the container */
+    }
+  
+    .btn-container {
+        /* Optional: stack buttons vertically */
+      width: 100%;
+      flex-direction: row; 
+      grid-gap: 0;
+    }
+    .btn{
+        border: solid 1px;
+        border-radius: 0;
+        font-size: 95%;
+    }
+    .search-bar input {
+      font-size: 11px;
+      padding: 15px;
+      width: 50%; /* Adjusts width to the container */
+      border: none;
+      border-radius: 4px;
+    }
+    .results-dropdown {
+      font-size: 1rem;
+      color: black;
+      position: absolute;
+      background: linear-gradient(rgb(161, 209, 236),rgb(80, 167, 211),rgb(3, 89, 122));
+      width: 50%; /* Make the dropdown match the width of the input */
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      /* Corrected from the earlier typo */
+      /* max-height: 100%; */
+      overflow-y: auto;
+      /* nov pi muk ri kroy */
+      z-index: 10000;
+    }
+  }
